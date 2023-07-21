@@ -47,7 +47,7 @@ function Login() {
     <div className="flex items-center justify-center min-h-screen">
       <div className="flex flex-col sm:flex-row shadow-lg rounded-lg w-full sm:w-4/5 md:w-3/5 lg:w-1/2 bg-slate-100">
         {/* First div with image */}
-        <div className="sm:w-1/2 md:w-1/3 bg-black h-[35vh]">
+        <div className="sm:w-1/2 md:w-1/3 bg-black h-[50vh]">
           <img className="w-full h-full object-fill " src="https://placekitten.com/400/400" alt="Profile" />
         </div>
         {/* Second div with login form */}
