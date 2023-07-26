@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import axios from 'axios';
 
 function Login() {
   const [email, setEmail] = useState('');
@@ -16,7 +17,7 @@ function Login() {
     setPasswordError('');
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     // Email validation
@@ -31,10 +32,19 @@ function Login() {
       return;
     }
 
-    // Perform login logic here if all validations pass
-    // For demonstration purposes, let's just log the email and password
-    console.log('Email:', email);
-    console.log('Password:', password);
+    const api = `https://api.example.com/login?email=${email}&p=${password}`;
+
+    try{
+      const response = await axios.get(api);
+      
+      if(response.data.success){
+        window.alert("success")
+      }else{
+        window.alert("failed")
+      }
+    }catch(err){
+      console.log(err);
+    }
 
     // Reset the form after successful login
     setEmail('');
