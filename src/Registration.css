@@ -1,0 +1,80 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 10px;
+}
+
+.main-container {
+  height: 80rem;
+  width: 75%;
+  margin-top: 2rem;
+  background-color: azure;
+  margin: auto;
+  display: flex;
+}
+
+h1 {
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 0.1rem;
+}
+
+.left-img {
+  width: 50%;
+  height: 100%;
+  background-color: blue;
+}
+
+.right-info {
+  width: 50%;
+  height: 100vh;
+  padding: 2rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.login-input {
+  display: flex;
+  flex-direction: column;
+  /* text-transform: uppercase; */
+  font-weight: 800;
+  margin: 2rem 0;
+  letter-spacing: 0.1rem;
+}
+
+.login-input > input {
+  height: 4.7rem;
+  outline: none;
+  border: none;
+  box-shadow: 0.2rem 0.2rem 1rem grey;
+}
+
+.login-input > input[placeholder] {
+  padding-left: 2rem;
+  font-size: medium;
+  font-weight: 600;
+}
+
+.login-input > label {
+  text-align: left;
+  margin-bottom: 2.2rem;
+  font-size: medium;
+}
+
+button {
+  padding: 2rem 0;
+  background-color: blue;
+  color: white;
+  margin-top: 2rem;
+  width: 100%;
+  border: none;
+  border-radius: 0.2rem;
+  font-size: medium;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+}
