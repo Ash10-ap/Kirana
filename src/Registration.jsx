@@ -1,5 +1,6 @@
+import axios from "axios";
 import React, { useState } from "react";
-import image from "../src/images.jpeg";
+// import image from "../src/images.jpeg";
 
 import "../src/Registration.css";
 
@@ -64,6 +65,29 @@ function Registration() {
     if (contact === "") {
       setContactError(true);
     }
+
+    const formData = {
+      email,
+      password,
+      contact,
+      username,
+      address
+    }
+    axios.post('http://localhost:3030/login',formData).then((response)=>{
+     const data = response.data;
+     if(response.status !== 201){
+      alert("please check the fields");
+     }
+     
+    }).catch((error)=>{
+      //console.log("something went wrong...")
+    })
+
+    setEmail("");
+    setAddress("");
+    setUsername("");
+    setPassword("");
+    setContact("");
   }
 
   return (
