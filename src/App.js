@@ -5,6 +5,7 @@ import "./App.css";
 import Home from "./Components/HomePage/Home";
 import AddToCart from "./Components/AddToCart/AddToCart";
 import Registration from "./Registration";
+import Filter from './view/Filter';
 
 function App() {
   return (
@@ -13,9 +14,10 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/cart" element={<AddToCart />} />
       </Routes> */}
-      <Login />
+      {/* <Login /> */}
       {/* <TempApp/> */}
-      <Registration />
+      {/* <Registration /> */}
+      <Filter />
       
     </div>
   );

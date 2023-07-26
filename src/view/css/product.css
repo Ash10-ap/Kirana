@@ -1,0 +1,42 @@
+/* ProductCard.css */
+
+.product-card {
+    cursor:pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: whitesmoke;
+    border-radius: 5px;
+    padding: 3px;
+    margin: 10px;
+    max-width: 250px; /* Set maximum width for the card */
+  }
+
+.showCategories{
+    display: flex;
+    flex-wrap: wrap;
+}
+  
+  .product-image img {
+    width: 200px; /* Square image with a fixed width */
+    height: 200px;
+    object-fit: cover; /* Maintain aspect ratio */
+    border-radius: 5px; /* Rounded corners for the image */
+  }
+  
+  .product-info {
+    text-align: center;
+  }
+  
+  .product-name {
+    margin-top: 10px;
+    font-size: 1.4rem;
+    font-weight: bold;
+  }
+  
+  .product-price {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #4caf50; /* Green color for the price */
+  }
+  
