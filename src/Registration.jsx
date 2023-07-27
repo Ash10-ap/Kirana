@@ -76,11 +76,11 @@ function Registration() {
     axios.post('http://localhost:3030/login',formData).then((response)=>{
      const data = response.data;
      if(response.status !== 201){
-      alert("please check the fields");
+      // alert("please check the fields");
      }
      
     }).catch((error)=>{
-      //console.log("something went wrong...")
+      console.log("something went wrong...")
     })
 
     setEmail("");

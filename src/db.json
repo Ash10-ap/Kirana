@@ -1,0 +1,60 @@
+{
+  "login": [
+    {
+      "email": "jdhfjd@gmail.com",
+      "password": "sdsds11212",
+      "contact": "1212121212",
+      "username": "dssdsd",
+      "address": "sasasasassas",
+      "id": 1
+    },
+    {
+      "email": "shubham@gmail.com",
+      "password": "shjahsja1212",
+      "contact": "2718752467",
+      "username": "shubham",
+      "address": "jkjdfjkhfhdsjfh",
+      "id": 2
+    },
+    {
+      "email": "sdfsfsdfsdf@gmail.com",
+      "password": "dfsdfd2312313",
+      "contact": "121220",
+      "username": "fsdfsdf",
+      "address": "pune",
+      "id": 3
+    },
+    {
+      "email": "Hello@gmail.com",
+      "password": "jjkhajhdjk12121212",
+      "contact": "121212121202",
+      "username": "heeybjkhhdjkf",
+      "address": "Ratnagiri",
+      "id": 4
+    },
+    {
+      "email": "jhsdjsjd@gmail.com",
+      "password": "kjhjhjhaks1222",
+      "contact": "212121343425",
+      "username": "atharv",
+      "address": "jhsdgsjdgfhj",
+      "id": 5
+    },
+    {
+      "email": "jashsjh@gmail.com",
+      "password": "gshgsjhdgj121212",
+      "contact": "12121212",
+      "username": "jhjhsjhdj",
+      "address": "sgdjhgsdfg",
+      "id": 6
+    },
+    {
+      "email": "ghgsdghsgd@gmail.com",
+      "password": "vdbnv121212",
+      "contact": "1212121",
+      "username": "bhjabsdnasbd",
+      "address": "bsdhnsdbfnsdf",
+      "id": 7
+    }
+  ]
+}
