@@ -17,7 +17,7 @@ const api="http://localhost:3030/products";
   // update the productbased on chategory
 const [product,setProduct] = useState("");
 // toggle data
-const [toggleValue,setToggleValue] = useState('');
+const [toggleValue,setToggleValue] = useState('product');
 
 const handleProdectChange =(e)=>{
   setProduct(e.target.value);
@@ -26,10 +26,10 @@ const handleProdectChange =(e)=>{
 }
 // update the search fild
 const handleSearch=(e)=>{
- if(e.key==="Enter"){
+//  if(e.key==="Enter"){
   setSearch(e.target.value);
   setToggleValue("search");
- }
+//  }
  
 }
 
@@ -38,19 +38,26 @@ useEffect(()=>{
     try {
       const res= await axios.get(api);
       const data= await res.data;
-      console.log(proList);
-      console.log(search,"..>",toggleValue);
-      // fillter for data by catergory
-      console.log(toggleValue === 'search');
-      const proFilter = toggleValue === 'search'
-      ?data.filter(pro=>pro.title.includes(search))
-      :toggleValue === 'product'
-      ?data.filter(pro=>pro.category.toLowerCase() === product.toLowerCase())
-      :data;
+      let proFilter=data;
 
-      console.log(proFilter);
+      if(proList.length>0){
+        console.log(proList);
+              console.log(search,"..>",toggleValue);
+              // fillter for data by catergory
+              console.log(toggleValue === 'product');
 
-      setProList(product.toLowerCase()=== "all categories"?data:proFilter);      
+              proFilter = toggleValue === 'search'
+              ?data.filter(pro=>pro.title.includes(search))
+              :toggleValue === 'product'
+              ?product.toLowerCase()=== "all categories"
+              ?data 
+              :data.filter(pro=>pro.category.toLowerCase() === product.toLowerCase())
+              :data;
+
+              console.log(proFilter);
+      }
+      setProList(proFilter); 
+         
     } catch (err) {
       setProList("");
       console.log(err);
