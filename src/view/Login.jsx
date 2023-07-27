@@ -31,16 +31,21 @@ function Login() {
     if (!password || password.length < 8) {
       setPasswordError('Password must be at least 8 characters long.');
       return;
-    }
+      }
 
-    const api = `https://api.example.com/login?email=${email}&p=${password}`;
+      const loginData = {
+          email,
+          password
+          }
 
-    try{
-      const response = await axios.get(api);
+    
+
+      try {
+          const response = await axios.post('https://localhost:5001/Register/login', loginData);
       
-      if(response.data.success){
-        window.alert("success")
-      }else{
+      if(response.status === 201){
+          window.alert("success")
+      } else if (response.status === 404){
         window.alert("failed")
       }
     }catch(err){
