@@ -1,0 +1,82 @@
+/* HorizontalBar.css */
+
+.horizontal-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: green; /* Green background color */
+    padding: 0px 10px 0px 10px;
+    color: white;
+    height: 6vh;
+    justify-content: center;
+  }
+  
+  .category-section {
+    display: flex;
+    align-items: center;
+  }
+  
+  .category-title {
+    color: red; /* Red color for the "All Categories" title */
+  }
+
+  .component{
+    display: flex;
+    margin-right: 30vw;
+  }
+  
+  .category-dropdown {
+    background-color: red; /* Red color for the dropdown background */
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    width: 20vw;
+    height: 6vh;
+    outline: none;
+    font-size: 15px;
+    margin-right: 10px;
+  }
+  .category-dropdown> option{
+    background-color: whitesmoke; /* Red color for the dropdown options */
+    color: black;
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+    font-size: 16px;
+    transition: background-color 0.2s ease;
+  }
+  
+  .search-section {/* HorizontalBar.css */    
+    display: flex;
+    align-items: center;
+    height: 6vh;
+  }
+  .search-input {
+    background-color: transparent; /* Transparent background for the search input */
+    color: white;
+    font-size: 1.4rem;
+    border: none;
+    width: 100%; /* Use full width for the search input */
+    height: 6vh;
+    outline: none;
+    font-size: 12px;
+  }
+  .search-input:focus{
+    border-bottom: 1px solid whitesmoke;
+    margin-top: -2px;
+  }
+  .search-input::placeholder{
+    font-size: 1.4rem;
+    color: whitesmoke;
+  }
+  
+  /* Media query for responsiveness */
+  @media (max-width: 768px) {
+    .horizontal-bar {
+      flex-direction: column; /* Stack the sections vertically on smaller screens */
+    }
+    .category-section {
+      margin-bottom: 10px; /* Add some spacing between the sections */
+    }
+  }
+  

@@ -77,11 +77,15 @@ function Registration() {
           const data = response.data;
           console.log('Product saved successfully:', response.data);
      if(response.status !== 201){
-      alert("please check the fields");
+      // alert("please check the fields");
      }
      
     }).catch((error)=>{
+<<<<<<< HEAD
       console.log("something went wrong...",error)
+=======
+      console.log("something went wrong...")
+>>>>>>> 88c597650a6b1dc7c1afb909fb347f213bd438ca
     })
 
     setEmail("");

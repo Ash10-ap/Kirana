@@ -1,22 +1,28 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import {removeFromCart} from '../../store/slices/CartSlice'
+import {removeFromCart, deleteFromcart} from '../../store/slices/CartSlice'
 function AddToCart() {
+ 
   const dispatch = useDispatch();
 
+  //localStorage.setItem(Math.random,'cartData')
+
   const data = useSelector((state)=>{
-    console.log("addTOCart==>",state.carts.length)
-      return state.carts;
-      
+      return state.carts;      
   });
 
   
-
-  const removeCart = (data) =>{
-      console.log('in a remove cart',data);
-      dispatch(removeFromCart(data))
-
+  const clearCart = (data) =>{
+    dispatch(deleteFromcart(data));
   }
+  
+
+  const removeCart = (i) =>{
+      console.log('in a remove cart',i);
+      dispatch(removeFromCart(i))
+    
+  }
+
   console.log("in cart page" + data.length);
   return (
     <div className="container mt-5">
@@ -27,7 +33,7 @@ function AddToCart() {
             <p>Your cart is empty.</p>
           ) : (
             <div>
-              <button className='btn btn-success'>clear cart</button>
+              <button className='btn btn-success' onClick={()=>{clearCart(data)}}>clear cart</button>
               {data.map((item) => (
                 <div className="card mb-3" key={item.id}>
                   <div className="row g-0">
@@ -46,7 +52,7 @@ function AddToCart() {
                       </div>
                     </div>
                   </div>
-                  <button className='btn btn-danger' onClick = {removeCart(item)}>Remove</button>
+                  <button className='btn btn-danger' onClick = {()=>removeCart(item.id)}>Remove</button>
                 </div>
               ))}
             </div>

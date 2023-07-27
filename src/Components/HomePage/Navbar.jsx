@@ -28,9 +28,10 @@ const Navbar = () => {
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav  d-flex justify-content-center flex-fill">
             <li className="nav-item">
-              <a className="nav-link text-dark fw-bold text-uppercase" href="/">
+              {/* <a className="nav-link text-dark fw-bold text-uppercase" href="/">
                 Home
-              </a>
+              </a> */}
+               <Link to="/" className="nav-link text-dark fw-bold text-uppercase">Home</Link>
             </li>
             <li className="nav-item ps-5">
               <a className="nav-link text-dark fw-bold text-uppercase hover-red" href="/">
@@ -41,6 +42,7 @@ const Navbar = () => {
               <a className="nav-link text-dark fw-bold text-uppercase" href="/">
                 Contact
               </a>
+             
             </li>
 
             <li className="nav-item ps-5">
