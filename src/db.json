@@ -3,7 +3,7 @@
       {
         "id": 1,
         "img":"https://i.pinimg.com/236x/97/74/d8/9774d8375aa5c8c0d02d3f08e98ddaf5.jpg",
-        "title": "hey",
+        "title": "heyy",
         "discription": "Todays article will demonstrate how to develop a login form in react js using formik.",
         "price":1200,
         "category":"spices"
