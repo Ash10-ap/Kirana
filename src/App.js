@@ -6,6 +6,7 @@ import Home from "./Components/HomePage/Home";
 import AddToCart from "./Components/AddToCart/AddToCart";
 import Registration from "./Registration";
 import Layout from "./Components/Layout/Layout";
+import ProductDescription from "./view/ProductDescription";
 function App() {
   return (
     <div>
@@ -13,6 +14,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/cart" element={<AddToCart />} />
+          <Route path="/product" element={<ProductDescription/>}/>
         </Routes>
       </Layout>
       {/* <Registration /> */}
