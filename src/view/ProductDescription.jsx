@@ -1,7 +1,11 @@
 import React from 'react'
 import './css/productDescrioption.css';
+import { useParams } from 'react-router-dom';
 
 function ProductDescription() {
+
+  const {id} = useParams();
+  console.log(id);
 
     const product = {
         id: 1,
