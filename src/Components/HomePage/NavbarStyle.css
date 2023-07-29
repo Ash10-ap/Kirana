@@ -18,6 +18,10 @@
   font-size: 12px;
 }
 
+.hover-bg:hover {
+  background-color: lightgreen; /* Change this to the desired background color on hover */
+}
+
 /* ul > li > .stylecolor {
   font-size: xx-large;
   color: brown;
