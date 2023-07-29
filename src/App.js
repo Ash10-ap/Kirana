@@ -7,6 +7,7 @@ import AddToCart from "./Components/AddToCart/AddToCart";
 import Registration from "./Registration";
 import Layout from "./Components/Layout/Layout";
 import ProductDescription from "./view/ProductDescription";
+import Filter from "./view/Filter";
 function App() {
   return (
     <div>
@@ -15,6 +16,8 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/cart" element={<AddToCart />} />
           <Route path="/product/:id" element={<ProductDescription/>}/>
+          <Route path="/specials" element={<Filter />} />
+
         </Routes>
       </Layout>
       {/* <Registration /> */}

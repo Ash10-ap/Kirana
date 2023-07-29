@@ -11,6 +11,11 @@
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
   }
   
+  .product-img{
+    display: flex;
+    flex-direction: column;
+  }
+
   .product-img img {
     max-width: 100%;
     height: auto;
@@ -58,8 +63,14 @@
   @media screen and (max-width: 768px) {
     .product-container {
       flex-direction: column;
+      flex-wrap: nowrap;
     }
   
+    .product-img{
+      display: flex;
+      flex-direction: column;
+    }
+
     .product-img {
       margin-bottom: 20px;
     }

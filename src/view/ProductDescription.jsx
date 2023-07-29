@@ -1,41 +1,57 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react';
 import './css/productDescrioption.css';
 import { useParams } from 'react-router-dom';
+import axios from 'axios';
 
 function ProductDescription() {
+  const { id } = useParams();
 
-  const {id} = useParams();
-  console.log(id);
+  // fetch data form api
+  const [productData, setProductData] = useState({});
 
-    const product = {
-        id: 1,
-        img: 'https://placekitten.com/400/400', // Replace with your product image URL
-        name: 'Sample Product',
-        price: 19.99,
-        description: 'This is a sample product description.',
-      };
-    
-      // Function to handle the "Add to Cart" click
-      const handleAddToCart = () => {
-        // Implement your logic to add the product to the cart here
-        console.log('Product added to cart:', product);
-      };
+  useEffect(() => {
+    const getData = async () => {
+      const api = "http://localhost:3030/products";
+      try {
+        const product = await axios.get(api);
+        const data = product.data;
 
+        // fetch data by id 
+        const filterId = data.filter(pid => pid.id == id);
+        setProductData(filterId[0]); // Assuming the filterId will have only one matching product
+      } catch (err) {
+        console.log(err);
+      }
+    }
+    getData();
+  }, [id]);
+
+  // Function to handle the "Add to Cart" click
+  const handleAddToCart = () => {
+    // Implement your logic to add the product to the cart here
+    console.log('Product added to cart:');
+  };
+
+  // Conditional rendering: Render the product information only when it is available
   return (
     <div className="product-container">
-      <div className="product-img">
-        <img src={product.img} alt={product.name} />
-        <button className="add-to-cart-btn bg-success" onClick={handleAddToCart}>
+      {productData && productData.img && (
+        <div className="product-img">
+          <img src={productData.img} alt={productData.title} />
+          <button className="add-to-cart-btn bg-success" onClick={handleAddToCart}>
             Add to Cart
-        </button>
-      </div>
-      <div className="product-info">
-        <h2>{product.name}</h2>
-        <p className="price">${product.price.toFixed(2)}</p>
-        <p>{product.description}</p>
-      </div>
+          </button>
+        </div>
+      )}
+      {productData && productData.title && (
+        <div className="product-info">
+          <h2>{productData.title}</h2>
+          <p className="price">RS. {productData.price}</p>
+          <p>{productData.discription}</p>
+        </div>
+      )}
     </div>
   );
 };
 
-export default ProductDescription
+export default ProductDescription;
