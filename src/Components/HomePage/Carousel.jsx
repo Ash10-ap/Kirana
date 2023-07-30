@@ -2,6 +2,8 @@ import React from 'react';
 import image1 from '../HomePage/download (1).jpeg'
 import image2 from '../HomePage/img2.jpeg'
 import image3 from '../HomePage/img3.jpeg'
+import carousel1 from '../HomePage/carousel2.jpeg'
+import carousel2 from '../HomePage/carouselIMg.jpeg'
 const Carousel = () => {
   const imageHeight = '200px'; 
   const imageWidth = '300px';
@@ -9,13 +11,13 @@ const Carousel = () => {
     <div id="carouselExample" className="carousel slide" data-bs-ride="carousel" style={{ height: imageHeight }}>
       <div className="carousel-inner">
         <div className="carousel-item active">
-          <img src={image1} className="d-block w-100" alt="" style={{ height: imageHeight, width: imageWidth }}/>
+          <img src={carousel1} className="d-block w-100 img-fluid" alt="" style={{ height: imageHeight, width: imageWidth }}/>
         </div>
         <div className="carousel-item">
-          <img src={image2} className="d-block w-100" alt="Image 2" style={{ height: imageHeight, width: imageWidth }}/>
+          <img src={carousel2} className="d-block w-100 img-fluid" alt="Image 2" style={{ height: imageHeight, width: imageWidth }}/>
         </div>
         <div className="carousel-item">
-          <img src={image3} className="d-block w-100" alt="Image 3" style={{ height: imageHeight, width: imageWidth }}/>
+          <img src={image3} className="d-block w-100 img-fluid" alt="Image 3" style={{ height: imageHeight, width: imageWidth }}/>
         </div>
       </div>
       <button className="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
