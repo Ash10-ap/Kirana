@@ -1,12 +1,23 @@
-import React from 'react'
+import React,{useState, useEffect} from 'react'
 import Footer from '../HomePage/Footer';
-import Navbar from '../HomePage/Navbar'
+import Loader from '../HomePage/Loader';
+import Navbar from '../HomePage/Navbar';
+
 function Layout({children}) {
+   const [loading, setLoading] = useState(true);
+
+  useEffect(()=>{
+    setTimeout(()=>{
+      setLoading(false);
+    },3000)
+  },[])
   return (
     <div>
-      <Navbar/>
-      <main>{children}</main>
+     {loading ?<Loader/>:(<> <Navbar/>
+      <main>{children}</main></>)
+     }
       {/* <Footer/> */}
+      
     </div>
   )
 }

@@ -92,12 +92,10 @@ function Registration() {
 
   return (
     <div className="main-container">
-      <div className="left-img">
-        {/* <img src={image} alt="image" srcset="" /> */}
-      </div>
+      
 
       <div className="right-info">
-        <h1>Registration</h1>
+        <h1 className="text-green">Registration</h1>
         <form action="" onSubmit={onSubmitHandler}>
           <div className="login-input">
             <label htmlFor="">Email</label>
@@ -185,7 +183,7 @@ function Registration() {
             </p>
           </div>
 
-          <button type="submit">Submit</button>
+          <button type="submit">Register</button>
         </form>
       </div>
     </div>
