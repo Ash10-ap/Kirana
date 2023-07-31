@@ -13,8 +13,11 @@ const Product = ({id,img,price,title}) => {
             </div>
             <div className="product-info">
                 <h3 className="product-name">{title}</h3>
-                <p className="product-price">Rs. {price}</p>
+                <small className="product-price">Rs. {price}</small>
             </div>
+            <button className="btn-addcart btn btn-primary btn-sm rounded-0" >
+              Add To Cart
+            </button>
         </div>
     </div>
   );
