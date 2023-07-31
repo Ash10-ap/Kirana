@@ -10,7 +10,7 @@ import Layout from "./Components/Layout/Layout";
 import Filter from "../src/view/Filter"
 
 import ProductDescription from "./view/ProductDescription";
-import Filter from "./view/Filter";
+/*import Filter from "./view/Filter";*/
 
 function App() {
   return (

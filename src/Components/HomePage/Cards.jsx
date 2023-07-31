@@ -20,7 +20,7 @@ const imgStyle = {
 };
 
 function Cards() {
-<<<<<<< HEAD
+
 const [prodData, setProdData] = useState([]);
     const dispatch = useDispatch();
 
@@ -29,15 +29,15 @@ const productDetails = async() =>{
     const data = await response.data;
 setProdData(data);  
 }
-=======
-  const [prodData, setProdData] = useState([]);
+
+  //const [prodData, setProdData] = useState([]);
   const dispatch = useDispatch();
 
   const productDetails = async () => {
     const response = await axios.get('https://fakestoreapi.com/products');
     setProdData(response.data);
   }
->>>>>>> fbfa508564e428d2d8b11bd1af2a7a1ff7043311
+
 
   const AddProCart = (data) => {
     console.log(data);

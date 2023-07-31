@@ -58,7 +58,7 @@ const Navbar = () => {
 
             <li className="nav-item ps-5">
               
-                              <Link to="/special" className="nav-link text-dark fw-bold text-uppercase">Special</Link>
+                              <Link to="/special" className="nav-link text-dark fw-bold text-uppercase">Special</Link></li>
 
             <li className="nav-item">
               <a className="nav-link text-dark fw-bold text-uppercase hover-red" href="/specials">
