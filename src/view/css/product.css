@@ -5,8 +5,12 @@
   margin: 10px;
   padding: 15px;
   padding-bottom: 0;
+  transition: box-shadow 0.3s ease;
 }
 
+.product:hover{
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
 .product-card {
     cursor:pointer;
     display: flex;
@@ -40,7 +44,7 @@
   .product-price {
     font-size: 1.4rem;
     font-weight: bold;
-    color: #4caf50; /* Green color for the price */
+    color: #4caf50;
   }
   
   .btn-addcart{
