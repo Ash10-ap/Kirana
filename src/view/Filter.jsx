@@ -27,7 +27,7 @@ const handleProdectChange =(e)=>{
 // update the search fild
 const handleSearch=(e)=>{
 //  if(e.key==="Enter"){
-  setSearch(e.target.value);
+  setSearch(e.target.value);  
   setToggleValue("search");
 //  }
  
@@ -95,7 +95,7 @@ useEffect(()=>{
         {proList.map((product)=>{
           return (
             <Product 
-              key={product.id}
+              id={product.id}
               img={product.img}
               title={product.title}
               price={product.price}

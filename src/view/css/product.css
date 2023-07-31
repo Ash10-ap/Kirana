@@ -1,14 +1,18 @@
 /* ProductCard.css */
 
+.product{
+  border:solid 0.2px #ccc;
+  margin: 10px;
+  padding: 15px;
+  padding-bottom: 0;
+}
+
 .product-card {
     cursor:pointer;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: whitesmoke;
-    border-radius: 5px;
-    padding: 3px;
-    margin: 10px;
+    /* margin: 10px; */
     max-width: 250px; /* Set maximum width for the card */
   }
 
@@ -29,7 +33,6 @@
   }
   
   .product-name {
-    margin-top: 10px;
     font-size: 1.4rem;
     font-weight: bold;
   }
@@ -40,3 +43,7 @@
     color: #4caf50; /* Green color for the price */
   }
   
+  .btn-addcart{
+    height: 3rem;
+    width: 115%;
+  }

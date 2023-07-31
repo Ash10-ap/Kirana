@@ -1,19 +1,41 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import './NavbarStyle.css'
+import './NavbarStyle.css';
+import kiranalogo from "../HomePage/kiranalogo.avif";
+
+const style={
+  container :{
+    justifyContent: "center",
+    rowGap: "19px"
+  },
+
+  imgStyle:{
+        height: "10rem",
+  },
+
+  toggleBtn:{
+    border:"none"
+  },
+
+  navUpdate:{
+    position:"sticky",
+    top:"0",
+    zIndex:"22"
+  }
+
+}
 const Navbar = () => {
   const cartCount = useSelector((state)=>{
       return state.carts.length
   })
   return (
     <>
-    <nav className="navbar navbar-expand-lg navbar-light bg-light">
-      <div className="container">
+    <nav className="navbar navbar-expand-lg bg-white" style={style.navUpdate}>
+      <div className="container" style={style.container}>
         <a className="navbar-brand" href="/">
-          <h1>Kirana</h1>
+          <img src={kiranalogo} alt="kirana" srcset="" style={style.imgStyle}/>
         </a>
-
         <button
           className="navbar-toggler"
           type="button"
@@ -21,42 +43,49 @@ const Navbar = () => {
           data-bs-target="#navbarNav"
           aria-controls="navbarNav"
           aria-expanded="false"
-          aria-label="Toggle navigation">
+          aria-label="Toggle navigation"
+          style={style.toggleBtn}
+          >
           <span className="navbar-toggler-icon"></span>
         </button>
 
         <div className="collapse navbar-collapse" id="navbarNav">
-          <ul className="navbar-nav  d-flex justify-content-center flex-fill">
+          <ul className="navbar-nav  d-flex justify-content-center align-items-center gap-md-3  fs-5 flex-fill">
             <li className="nav-item">
-              {/* <a className="nav-link text-dark fw-bold text-uppercase" href="/">
-                Home
-              </a> */}
+              
                <Link to="/" className="nav-link text-dark fw-bold text-uppercase">Home</Link>
             </li>
+
             <li className="nav-item ps-5">
               
                               <Link to="/special" className="nav-link text-dark fw-bold text-uppercase">Special</Link>
+
+            <li className="nav-item">
+              <a className="nav-link text-dark fw-bold text-uppercase hover-red" href="/specials">
+                Special
+              </a>
+
             </li>
-            <li className="nav-item ps-5">
+            <li className="nav-item ">
               <a className="nav-link text-dark fw-bold text-uppercase" href="/">
                 Contact
               </a>
              
             </li>
 
-            <li className="nav-item ps-5">
+            <li className="nav-item ">
               <a className="nav-link text-dark fw-bold text-uppercase" href="/">
                 Site map
               </a>
             </li>
 
-            <li className="nav-item ps-5">
+            <li className="nav-item">
               <a className="nav-link text-dark fw-bold text-uppercase" href="/">
                 Brands
               </a>
             </li>
 
-            <li className="nav-item ps-5">
+            <li className="nav-item">
               <a className="nav-link text-dark fw-bold text-uppercase "  href="/">
                 Blogs
               </a>
@@ -76,27 +105,7 @@ const Navbar = () => {
       </div>
     </nav>
 
-     <nav className="navbar navbar-expand-lg navbar-light bg-success">
-      <div className="container">
-        <div className="collapse navbar-collapse" id="navbarNav">
-          <ul className="navbar-nav">
-            <li className="nav-item dropdown">
-              <a className="nav-link dropdown-toggle text-white bg-danger" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                <i className="bi bi-grid-3x3-gap"></i> Categories
-              </a>
-              <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a className="dropdown-item" href="/">Category 1</a></li>
-                <li><a className="dropdown-item" href="/">Category 2</a></li>
-                <li><a className="dropdown-item" href="/">Category 3</a></li>
-                <li><a className="dropdown-item" href="/">Category 4</a></li>
-                <li><a className="dropdown-item" href="/">Category 5</a></li>
-                <li><a className="dropdown-item" href="/">Category 6</a></li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+
     </>
   );
 };
