@@ -24,11 +24,12 @@ const mystyle = {
   
 function Cards() {
 const [prodData, setProdData] = useState([]);
-const dispatch = useDispatch();
+    const dispatch = useDispatch();
 
 const productDetails = async() =>{
-const  response  = await axios.get('https://fakestoreapi.com/products');
-setProdData(response.data);  
+    const response = await axios.get('https://localhost:7272/Products/GetAll');
+    const data = await response.data;
+setProdData(data);  
 }
 
 const AddProCart = (data) =>{

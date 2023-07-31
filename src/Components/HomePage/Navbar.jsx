@@ -34,9 +34,8 @@ const Navbar = () => {
                <Link to="/" className="nav-link text-dark fw-bold text-uppercase">Home</Link>
             </li>
             <li className="nav-item ps-5">
-              <a className="nav-link text-dark fw-bold text-uppercase hover-red" href="/">
-                Special
-              </a>
+              
+                              <Link to="/special" className="nav-link text-dark fw-bold text-uppercase">Special</Link>
             </li>
             <li className="nav-item ps-5">
               <a className="nav-link text-dark fw-bold text-uppercase" href="/">

@@ -81,11 +81,8 @@ function Registration() {
      }
      
     }).catch((error)=>{
-<<<<<<< HEAD
+
       console.log("something went wrong...",error)
-=======
-      console.log("something went wrong...")
->>>>>>> 88c597650a6b1dc7c1afb909fb347f213bd438ca
     })
 
     setEmail("");
