@@ -4,12 +4,14 @@ import Carousel from "./Carousel";
 import Footer from "./Footer";
 import loaderImg from "../HomePage/kiranalogo.avif";
 import { useEffect } from "react";
+import BrandCarousel from "../../view/components/BrandCarousel";
 
 const Cards = lazy(() => import("./Cards"));
 function Home() {
   return (
     <>
       <Carousel />
+      <BrandCarousel/>
       <Suspense
         fallback={
           <div className="text-center">

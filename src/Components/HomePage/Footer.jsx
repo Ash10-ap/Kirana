@@ -1,16 +1,9 @@
 import React from 'react';
 import { FaShoppingCart, FaPhone, FaMapMarkerAlt } from 'react-icons/fa';
 
-const style = {
-  footerUpdate:{
-    // position:"sticky",
-    bottom:"0",
-    
-  }
-}
 const Footer = () => {
   return (
-    <footer className="bg-dark text-light py-4 fs-3" style={style.footerUpdate}>
+    <footer className="bg-dark text-light py-4 fs-3 top-0" >
       <div className="container text-center">
         <div className="row">
           <div className="col-md-4 ">
