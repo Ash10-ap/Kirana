@@ -7,18 +7,22 @@ import AddToCart from "./Components/AddToCart/AddToCart";
 import Registration from "./Registration";
 import Layout from "./Components/Layout/Layout";
 import ProductDescription from "./view/ProductDescription";
-import Filter from "./view/Filter";
+//import Filter from "./view/Filter";
+import { lazy, Suspense } from "react";
+
+const Filter = lazy(() => import("./view/Filter"));
 function App() {
   return (
     <div>
       <Layout>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/cart" element={<AddToCart />} />
-          <Route path="/product/:id" element={<ProductDescription/>}/>
-          <Route path="/specials" element={<Filter />} />
-
-        </Routes>
+        <Suspense fallback={<p>please wait your page loading....</p>}>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/cart" element={<AddToCart />} />
+            <Route path="/product/:id" element={<ProductDescription />} />
+            <Route path="/specials" element={<Filter />} />
+          </Routes>
+        </Suspense>
       </Layout>
       {/* <Registration /> */}
     </div>

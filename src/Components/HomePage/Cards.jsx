@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../../store/slices/CartSlice";
+import Loader from "./Loader";
 
 const mystyle = {
   height: "100%", // Set a fixed height for the cards
@@ -21,11 +22,13 @@ const imgStyle = {
 
 function Cards() {
   const [prodData, setProdData] = useState([]);
+  const [isLoading,setIslloading] = useState(true);
   const dispatch = useDispatch();
 
   const productDetails = async () => {
     const response = await axios.get('https://fakestoreapi.com/products');
     setProdData(response.data);
+    setIslloading(false);
   }
 
   const AddProCart = (data) => {
@@ -41,7 +44,7 @@ function Cards() {
 
   return (
     <>
-      <div className="container my-5 text-center">
+      {isLoading?<Loader/>:<div className="container my-5 text-center">
         <div className="row justify-content-center" style={rowCenter}>
           {prodData.map((element) => {
             return (
@@ -65,7 +68,7 @@ function Cards() {
             );
           })}
         </div>
-      </div>
+      </div>}
     </>
   );
 }
