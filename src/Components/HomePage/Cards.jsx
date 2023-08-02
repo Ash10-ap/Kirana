@@ -3,6 +3,7 @@ import axios from "axios";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../../store/slices/CartSlice";
 import Loader from "./Loader";
+import CardSkeleton from "./CardSkeleton";
 
 const mystyle = {
   height: "100%", // Set a fixed height for the cards
@@ -44,7 +45,7 @@ function Cards() {
 
   return (
     <>
-      {isLoading?<Loader/>:<div className="container my-5 text-center">
+      {isLoading? <CardSkeleton/>:<div className="container my-5 text-center">
         <div className="row justify-content-center" style={rowCenter}>
           {prodData.map((element) => {
             return (
@@ -69,6 +70,7 @@ function Cards() {
           })}
         </div>
       </div>}
+     
     </>
   );
 }
