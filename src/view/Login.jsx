@@ -1,13 +1,19 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import './css/login.css'
+import { Link, useNavigate } from 'react-router-dom';
+import Home from '../Components/HomePage/Home';
+import { useDispatch } from 'react-redux';
+import { addUserName } from '../store/slices/LoginSlice';
 
 function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [emailError, setEmailError] = useState('');
   const [passwordError, setPasswordError] = useState('');
-
+  
+  const navigate = useNavigate();
+  const dispatch  = useDispatch();
   const handleEmailChange = (e) => {
     setEmail(e.target.value);
     setEmailError('');
@@ -18,7 +24,7 @@ function Login() {
     setPasswordError('');
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async(e) => {
     e.preventDefault();
 
     // Email validation
@@ -33,6 +39,7 @@ function Login() {
       return;
     }
 
+    
     const api = `https://api.example.com/login?email=${email}&p=${password}`;
 
     try{
@@ -48,6 +55,15 @@ function Login() {
     }
 
     // Reset the form after successful login
+
+    //login toggle feature
+    // if(email==="shailesh@gmail.com" && password==="Shailesh@1998"){
+    //   navigate('/');
+    //   dispatch(addUserName(email));
+    //   console.log("submission"+ email + password)
+    // }else{
+    //  console.log("submission not"+ email + password);
+    //  }
     setEmail('');
     setPassword('');
     setEmailError('');
@@ -93,7 +109,7 @@ function Login() {
           <a href="/forgot-password">Forgot Password?</a>
         </div>
         <div className="forgot-password-link">
-          <a href="/registration"> Register </a>
+          <Link to="/registration"> Register </Link>
         </div>
       </div>
     </div>

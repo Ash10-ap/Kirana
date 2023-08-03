@@ -13,6 +13,7 @@ import { combineReducers, configureStore } from "@reduxjs/toolkit";
 import { persistStore, persistReducer } from "redux-persist";
 import storage from "redux-persist/lib/storage"; // defaults to localStorage
 import cartSlice from "./slices/CartSlice";
+import loginSlice from "./slices/LoginSlice";
 
 // Configuration for Redux Persist
 const persistConfig = {
@@ -21,7 +22,8 @@ const persistConfig = {
 };
 
 const reducer =  combineReducers({
-   carts : cartSlice
+   carts : cartSlice,
+   login : loginSlice
 })
 
 const persistRed = persistReducer(persistConfig, reducer)
