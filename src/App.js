@@ -21,6 +21,8 @@ function App() {
             <Route path="/cart" element={<AddToCart />} />
             <Route path="/product/:id" element={<ProductDescription />} />
             <Route path="/specials" element={<Filter />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/registration" element={<Registration />} />
           </Routes>
         </Suspense>
       </Layout>

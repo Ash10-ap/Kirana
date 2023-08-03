@@ -92,6 +92,9 @@ function Login() {
         <div className="forgot-password-link">
           <a href="/forgot-password">Forgot Password?</a>
         </div>
+        <div className="forgot-password-link">
+          <a href="/registration"> Register </a>
+        </div>
       </div>
     </div>
   );

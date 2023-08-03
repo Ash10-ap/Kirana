@@ -94,7 +94,9 @@ const Navbar = () => {
             <span className="cart-count">{cartCount}</span>
           </div>
           </div>
-          <button className="btn btn-primary ps-3">LOGIN</button>
+          <Link to="/login">
+            <button className="btn btn-primary ps-3">LOGIN</button>
+          </Link>
         </div>
       </div>
     </nav>

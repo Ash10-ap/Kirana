@@ -13,7 +13,7 @@ html {
 }
 
 .main-container {
-  height: auto; /* Updated to adjust height based on content */
+  height: auto;
   color: green;
   max-width: 120rem;
   margin: 2rem auto;
@@ -24,10 +24,8 @@ html {
   background-size: cover;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
   text-align: center;
-  opacity: 0; /* Initial opacity set to 0 for fade-in animation */
-  animation: fadeIn 1s forwards; /* Animation for fade-in effect */
-  /* filter: blur(8px); */
-  /* -webkit-filter: blur(8px); */
+  opacity: 0;
+  animation: fadeIn 1s forwards;
 }
 
 @keyframes fadeIn {
